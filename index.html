@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gxd18.github.io">
-  <title>小记录</title>
+  <title>笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="——————一——————">
 <meta property="og:type" content="website">
-<meta property="og:title" content="小记录">
+<meta property="og:title" content="笔记">
 <meta property="og:url" content="http://gxd18.github.io/index.html">
-<meta property="og:site_name" content="小记录">
+<meta property="og:site_name" content="笔记">
 <meta property="og:description" content="——————一——————">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="GXD">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="小记录" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="笔记" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -48,7 +48,7 @@
 			<img src="/img/a.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">GXD</a></h1>
 		</hgroup>
 		
 
@@ -104,7 +104,7 @@
 				<img src="/img/a.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">GXD</h1>
 			</hgroup>
 			
 			
@@ -151,6 +151,116 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Java基础-反射机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>:one: 反射机制有什么用？</p>
+<p>通过java语言中的反射机制就可以操作字节码文件。</p>
+<p>:two: 反射机制相关类在哪个包下？</p>
+<p><code>java.lang.refect</code></p>
+<p>:three: 反射机制中常用的类</p>
+<ul>
+<li>java.long.Class     字节码文件</li>
+<li>java.lang.reflcet.Method  字节码文件中的方法字节码 </li>
+<li>java.lang.reflect.Field  字节码文件中的属性字节码</li>
+<li>java.lang.reflect.Constructor  字节码文件中的构造方法字节码</li>
+</ul>
+<h2 id="获取Class的三种方式"><a href="#获取Class的三种方式" class="headerlink" title="获取Class的三种方式"></a>获取Class的三种方式</h2><ol>
+<li><p>通过forName()来获取</p>
+<blockquote>
+<p>forName()是静态方法，方法参数是一个带有完整包名的类名形式的字符串。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">       <span class="comment">//获取String类的字节码文件，c1代表了String类型</span></span><br><span class="line">        Class c1 = Class.forName(<span class="string">&quot;java.lang.String&quot;</span>);</span><br><span class="line">        <span class="comment">//输出c1    class java.lang.String</span></span><br><span class="line">        System.out.println(c1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>java中任何一个对象都有getClass()方法。这个方法在Object里定义</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">&quot;aca&quot;</span>;</span><br><span class="line"><span class="comment">//x代表Sting.class字节码文件，x为Stirng类型</span></span><br><span class="line">Class x = s.getClass();</span><br><span class="line"><span class="comment">//字节码文件装载到jvm中时只装载一份</span></span><br><span class="line"><span class="comment">//x 和 c1的引用是相同的</span></span><br><span class="line"> System.out.println(x==c1);  <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>java语言中任何一种类型，包括基本数据类型都有<code>.class</code>属性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class c2 = <span class="keyword">int</span>.class;</span><br><span class="line">System.out.println(c2);        <span class="comment">//int</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="获取Class能干什么？"><a href="#获取Class能干什么？" class="headerlink" title="获取Class能干什么？"></a>获取Class能干什么？</h2><p>通过反射机制获取Class，通过Class来获取对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//User.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;无参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> str)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;有参构造&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*以前直接使用new来获取对象</span></span><br><span class="line"><span class="comment">User user = new User();</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Class c1=Class.forName(<span class="string">&quot;cn.demo.reflectx.User&quot;</span>);</span><br><span class="line"><span class="comment">//执行User无参构造</span></span><br><span class="line">Object obj = c1.newInstance();</span><br><span class="line"><span class="comment">//输出obj的地址值</span></span><br><span class="line">System.out.println(obj);</span><br></pre></td></tr></table></figure>
+
+<p>先对以前获取对象的方式在代码上相对有些复杂但是实际上反射机制只要获取类名就可创建出对象来。把上述中的<code>cn.demo.reflect.User</code>替换成<code>java.lang.String</code>就可以创建出一个String类对象，替换成<code>java.util.Data</code>就可以创建出一个Data的对象。</p>
+<h2 id="使用配置文件读取Class"><a href="#使用配置文件读取Class" class="headerlink" title="使用配置文件读取Class"></a>使用配置文件读取Class</h2><ul>
+<li><p>学习IO流时候接触到了properties配置文件，这里可以将要读取的Class写入到配置文件中通过流的方式读取</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//classinfo.properties文件</span></span><br><span class="line">classname=java.lang.String</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//读取配置文件</span></span><br><span class="line">FileReader reader=<span class="keyword">new</span> FileReader(<span class="string">&quot;clsssinfo.properties&quot;</span>);</span><br><span class="line"><span class="comment">//创建序列化对象</span></span><br><span class="line">Properties p=<span class="keyword">new</span> Properties();</span><br><span class="line"><span class="comment">//发序列化</span></span><br><span class="line">p.load(reader);</span><br><span class="line">reader.close();</span><br><span class="line"><span class="comment">//读取配置文件中的classname的内容</span></span><br><span class="line">String className=p.getProperty(<span class="string">&quot;className&quot;</span>);</span><br><span class="line">Class c=Class.forName(className);</span><br><span class="line">c.newInstance();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过<code>Thread</code>来读取配置文件，这里的配置文件只能方法类的根路径下，其它路径外读取不到。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*Thrad.currentThread() </span></span><br><span class="line"><span class="comment">getcontextClassLaoder() 县城对象方法，可以获取前</span></span><br><span class="line"><span class="comment">线程的类加载器对喜</span></span><br><span class="line"><span class="comment">getResource（）获取资源，当前线程的类加载默认从类的跟路径下加载</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line">String path = Thread.currentThread()    <span class="comment">//当前线程对象</span></span><br><span class="line">    .getContextClassLoader()            <span class="comment">//当前对象方法，可以获取当前线程的类加载器对象</span></span><br><span class="line">    .getResource(<span class="string">&quot;info.properties&quot;</span>)        <span class="comment">//获取资源，当前线程的类加载默认从类的跟路径下加载</span></span><br><span class="line">    .getPath();</span><br><span class="line">Properties p = <span class="keyword">new</span> Properties();</span><br><span class="line">p.load(<span class="keyword">new</span> FileReader(path));</span><br><span class="line">Class c= Class.forName(p.getProperty(<span class="string">&quot;classname&quot;</span>));</span><br><span class="line">c.newInstance();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接通过流来读取</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">InputStream path=Thread.currentThread().</span><br><span class="line">    getContextClassLoader()</span><br><span class="line">    .getResourceAsStream(<span class="string">&quot;inf.properties&quot;</span>);</span><br><span class="line"></span><br><span class="line">Properties p = <span class="keyword">new</span> Properties();</span><br><span class="line">p.load(path);</span><br><span class="line">Class c= Class.forName(p.getProperty(<span class="string">&quot;classname&quot;</span>));</span><br><span class="line">c.newInstance();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用资源绑定器，在java1.1提供了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//资源绑定其，便于获取属性配置文件中的内容</span></span><br><span class="line"><span class="comment">//使用这个方式，属性配置文件必须放到类路径下,只能绑定properties类文件</span></span><br><span class="line"><span class="comment">//获取的配置文件不能有后缀</span></span><br><span class="line">ResourceBundle bundle=ResourceBundle.getBundle(<span class="string">&quot;info&quot;</span>);</span><br><span class="line">String s = bundle.getString(<span class="string">&quot;classname&quot;</span>);</span><br><span class="line">System.out.println(s);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="获取Class文件属性"><a href="#获取Class文件属性" class="headerlink" title="获取Class文件属性"></a>获取Class文件属性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Students</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> no;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo8</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.reflectx.Students&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取所有属性</span></span><br><span class="line">        Field[] fields = c.getDeclaredFields();</span><br><span class="line">        <span class="keyword">for</span> (Field field : fields) &#123;</span><br><span class="line">            <span class="comment">//获取属性名字</span></span><br><span class="line">            System.out.println(<span class="string">&quot;属性名：&quot;</span>+field.getName());</span><br><span class="line">            <span class="comment">//获取属性的类型</span></span><br><span class="line">            System.out.println(<span class="string">&quot;类型：&quot;</span>+field.getType().getSimpleName());</span><br><span class="line">            <span class="comment">//获取属性的修饰符,返回对应的修饰符代号数字</span></span><br><span class="line">            System.out.println(<span class="string">&quot;修饰符数字：&quot;</span>+field.getModifiers());</span><br><span class="line">            <span class="comment">//获取修饰符的字符传形式</span></span><br><span class="line">            System.out.println(<span class="string">&quot;修饰符字符：&quot;</span>+Modifier.toString(field.getModifiers()));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//获取单个属性</span></span><br><span class="line">        Field fieldname = c.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="为属性赋值"><a href="#为属性赋值" class="headerlink" title="为属性赋值"></a>为属性赋值</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RefectDemo10</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchFieldException </span>&#123;</span><br><span class="line">        <span class="comment">//获取字节码对象</span></span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.reflectx.Students&quot;</span>);</span><br><span class="line">        <span class="comment">//创建对象</span></span><br><span class="line">        Object obj=c.newInstance();</span><br><span class="line">        <span class="comment">//获取name的属性</span></span><br><span class="line">        Field field=c.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        <span class="comment">//打破封装（反射机制的缺点，可以访问私有属性</span></span><br><span class="line">        <span class="comment">//由于name是私有化属性</span></span><br><span class="line">        field.setAccessible(<span class="keyword">true</span>);</span><br><span class="line">        <span class="comment">//为name赋值</span></span><br><span class="line">        field.set(obj,<span class="string">&quot;fad&quot;</span>);</span><br><span class="line">    </span><br><span class="line">        System.out.println(field.get(obj));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取方法及其修饰符"><a href="#获取方法及其修饰符" class="headerlink" title="获取方法及其修饰符"></a>获取方法及其修饰符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo11</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.reflectx.UserService&quot;</span>);</span><br><span class="line">        </span><br><span class="line">        Method[] methods = c.getDeclaredMethods();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Method method : methods) &#123;</span><br><span class="line">            <span class="comment">//获取方法名</span></span><br><span class="line">            System.out.println(method.getName());</span><br><span class="line">            <span class="comment">//获取返回类型</span></span><br><span class="line">            System.out.println(method.getReturnType().getSimpleName());</span><br><span class="line">            <span class="comment">//获取修饰符</span></span><br><span class="line">            Modifier.toString(method.getModifiers());</span><br><span class="line">            <span class="comment">//返回修饰参数列表</span></span><br><span class="line">            System.out.println(<span class="string">&quot;++++++++++&quot;</span>);</span><br><span class="line">            <span class="comment">//参数可能有多个数组来接收</span></span><br><span class="line">            Class[] p = method.getParameterTypes();</span><br><span class="line">            <span class="keyword">for</span> (Class aClass : p) &#123;</span><br><span class="line">                System.out.println(aClass.getSimpleName());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo12</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.reflectx.UserService&quot;</span>);</span><br><span class="line"></span><br><span class="line">        Object obj=c.newInstance();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//获取ogin方法</span></span><br><span class="line">        Method loginMethod=c.getDeclaredMethod(<span class="string">&quot;login&quot;</span>, String.class, String.class);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//调用方法</span></span><br><span class="line">        Object reValue=loginMethod.invoke(obj,<span class="string">&quot;admin&quot;</span>,<span class="string">&quot;23&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(reValue);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="有参构造获取对象"><a href="#有参构造获取对象" class="headerlink" title="有参构造获取对象"></a>有参构造获取对象</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo13</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.reflectx.UserService&quot;</span>);</span><br><span class="line">        <span class="comment">//获取有参构造</span></span><br><span class="line">        Constructor cc=c.getDeclaredConstructor(String.class);</span><br><span class="line">        <span class="comment">//执行有参构造</span></span><br><span class="line">        cc.newInstance(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="获取父类"><a href="#获取父类" class="headerlink" title="获取父类"></a>获取父类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflectDemo14</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;java.lang.String&quot;</span>);</span><br><span class="line">        <span class="comment">//获取副列</span></span><br><span class="line">        Class superc=c.getSuperclass();</span><br><span class="line">        System.out.println(superc.getName());</span><br><span class="line">        <span class="comment">//获取Sting类实现的所有接口</span></span><br><span class="line">        Class[] ci=c.getInterfaces();</span><br><span class="line">        <span class="keyword">for</span> (Class aClass : ci) &#123;</span><br><span class="line">            System.out.println(aClass.getName());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="整理的上课笔记，多看看api文档，这里知识点在文档里都有"><a href="#整理的上课笔记，多看看api文档，这里知识点在文档里都有" class="headerlink" title="整理的上课笔记，多看看api文档，这里知识点在文档里都有"></a>整理的上课笔记，多看看api文档，这里知识点在文档里都有</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Java基础-Lambda表达式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
