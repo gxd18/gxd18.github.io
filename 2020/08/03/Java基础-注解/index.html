@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gxd18.github.io">
-  <title>Archives: 2020 | 笔记</title>
+  <title>Java基础-注解 | 笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="——————一——————">
-<meta property="og:type" content="website">
-<meta property="og:title" content="笔记">
-<meta property="og:url" content="http://gxd18.github.io/archives/2020/index.html">
+  <meta name="description" content="概述注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。 语法1[修饰符列表] @interface 注解名&amp;#123;&amp;#125;  注解怎么用？1@注解名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础-注解">
+<meta property="og:url" content="http://gxd18.github.io/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/index.html">
 <meta property="og:site_name" content="笔记">
-<meta property="og:description" content="——————一——————">
+<meta property="og:description" content="概述注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。 语法1[修饰符列表] @interface 注解名&amp;#123;&amp;#125;  注解怎么用？1@注解名">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-03T13:11:30.000Z">
+<meta property="article:modified_time" content="2020-08-04T00:56:59.517Z">
 <meta property="article:author" content="GXD">
 <meta name="twitter:card" content="summary">
   
@@ -150,103 +152,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java基础-注解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java基础-注解
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
+
+        
+        <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
   	<time datetime="2020-08-03T13:11:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/">Java基础-注解</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] @interface 注解名&#123;&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="注解怎么用？"><a href="#注解怎么用？" class="headerlink" title="注解怎么用？"></a>注解怎么用？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@注解名</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
+
+<h2 id="系统内置注解"><a href="#系统内置注解" class="headerlink" title="系统内置注解"></a>系统内置注解</h2><table>
+<thead>
+<tr>
+<th>FunctionalInterface</th>
+<th>用翔实的注释类型来表示一个接口类型声明的目的是空功能接口由java语言规范定义。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Override</td>
+<td>表示一个方法声明的目的是覆盖父类方法声明。</td>
+</tr>
+<tr>
+<td>SafeVarargs</td>
+<td>序员断言体标注的方法或构造函数没有对其参数进行交互可能不安全的操作。</td>
+</tr>
+<tr>
+<td>SuppressWarnings</td>
+<td>指示在注释元素（和包含在注释元素中的所有程序元素中）应被抑制命名的编译器警告。</td>
+</tr>
+<tr>
+<td>Deprecated</td>
+<td>标注那些过时的类、方法</td>
+</tr>
+</tbody></table>
+<h2 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h2><p>标注“注解”的注解，常用的元注解</p>
+<p>@Target（ElementType.METHOD)    修饰注解的，决定注解出现的位置</p>
+<p>ElementType是枚举类型，METHOD表明这个被注解的注解只能出现在方法上</p>
+<p>@Retention（RetentionPolicy.SOURCE)    修饰注解的，最总保存到哪里</p>
+<p>RetentionPolicy是枚举类型，SOURCE表明了被注解的注解只会保留在原文件中，编译不会生成.class文件</p>
+<h2 id="注解中的属性"><a href="#注解中的属性" class="headerlink" title="注解中的属性"></a>注解中的属性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> myannotation&#123;</span><br><span class="line">    <span class="function">String <span class="title">name</span><span class="params">()</span></span>;    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">age</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//name、age是属性不是方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>myannotation</code>注解中有属性则必须给属性进行赋值，编译报错</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@主机名（属性名=属性值）</span></span><br><span class="line"><span class="meta">@myannotation(name=&quot;wang&quot;,age=12)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果属性中指定了默认值，在使用注解时可以不进行赋值，赋值后默认值会被覆盖</li>
+</ul>
+<ul>
+<li>如果注解中的属性名是value，在使用注解是可以忽略属性名</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> myannotation1&#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@主机名（属性值)</span></span><br><span class="line"><span class="meta">@myannotation1(&quot;wang&quot;)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="反射机制使用注解"><a href="#反射机制使用注解" class="headerlink" title="反射机制使用注解"></a>反射机制使用注解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationDemo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//获取类</span></span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.AnnotationDemo1&quot;</span>);</span><br><span class="line">        <span class="comment">//判断类上是否有注解</span></span><br><span class="line">        <span class="keyword">if</span>(c.isAnnotationPresent(myannotation.class))&#123;</span><br><span class="line">            <span class="comment">//获取注解对象</span></span><br><span class="line">            myannotation muan=(myannotation)c.getAnnotation(myannotation.class);</span><br><span class="line">            <span class="comment">//获取注解的属性</span></span><br><span class="line">            muan.age();</span><br><span class="line">            muan.name();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="反射机制在开发中使用"><a href="#反射机制在开发中使用" class="headerlink" title="反射机制在开发中使用"></a>反射机制在开发中使用</h2><p><strong>假设有<code>@IDAnnotation</code>的注解,这个注解只能出现在类上，被注解的类中必须有<code>int</code>类型的<code>id</code>属性，否则抛出异常</strong></p>
+<ul>
+<li>创建一个注解</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这个元注解表名被注解的只能是类</span></span><br><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="comment">//这个元注解表名这个注解可以被反射机制拿到</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> IDAnnotation &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个被标注的类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IDAnnotation</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotaionDemo3</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用反射机制获取<code>AnnotationDemo3</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationDemo4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//获取AnnotationDemo3类</span></span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.AnnotaionDemo3&quot;</span>);</span><br><span class="line">        <span class="comment">//默认标记</span></span><br><span class="line">        <span class="keyword">boolean</span> hasintid=<span class="keyword">false</span>;</span><br><span class="line">        <span class="comment">//判断是否有IDAnnotation这个注解</span></span><br><span class="line">        <span class="keyword">if</span>(c.isAnnotationPresent(IDAnnotation.class))&#123;</span><br><span class="line">            <span class="comment">//回去AnnotationDmeo3下的所有属性</span></span><br><span class="line">           Field[] fields=c.getDeclaredFields();</span><br><span class="line">            <span class="keyword">for</span> (Field field : fields) &#123;</span><br><span class="line">                <span class="comment">//判断是否有int id</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="string">&quot;id&quot;</span>.equals(field.getName())&amp;&amp;<span class="string">&quot;int&quot;</span>.equals(field.getType().getSimpleName()))&#123;</span><br><span class="line">                    hasintid=<span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果没有int id抛出异常</span></span><br><span class="line">        <span class="keyword">if</span>(!hasintid)&#123;</span><br><span class="line">            <span class="comment">//自定义异常类</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> AnnotationException(<span class="string">&quot;@IDAnnotation注解的类必须有int属性的id&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gxd18.github.io/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" class="archive-article-date">
-  	<time datetime="2020-08-03T12:43:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础-反射机制</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/">Java基础-反射机制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">注解怎么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%86%85%E7%BD%AE%E6%B3%A8%E8%A7%A3"><span class="toc-number">4.</span> <span class="toc-text">系统内置注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E6%B3%A8%E8%A7%A3"><span class="toc-number">5.</span> <span class="toc-text">元注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text">注解中的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">7.</span> <span class="toc-text">反射机制使用注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">反射机制在开发中使用</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-08-03T01:58:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Java基础-Lambda表达式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -269,8 +386,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

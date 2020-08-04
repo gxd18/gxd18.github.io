@@ -152,6 +152,74 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java基础-注解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/">Java基础-注解</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2020-08-03T13:11:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。</p>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] @interface 注解名&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注解怎么用？"><a href="#注解怎么用？" class="headerlink" title="注解怎么用？"></a>注解怎么用？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@注解名</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Java基础-反射机制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -198,12 +266,6 @@
 
 </li>
 </ol>
-<h2 id="获取Class能干什么？"><a href="#获取Class能干什么？" class="headerlink" title="获取Class能干什么？"></a>获取Class能干什么？</h2><p>通过反射机制获取Class，通过Class来获取对象</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//User.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;无参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> str)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;有参构造&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*以前直接使用new来获取对象</span></span><br><span class="line"><span class="comment">User user = new User();</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Class c1=Class.forName(<span class="string">&quot;cn.demo.reflectx.User&quot;</span>);</span><br><span class="line"><span class="comment">//执行User无参构造</span></span><br><span class="line">Object obj = c1.newInstance();</span><br><span class="line"><span class="comment">//输出obj的地址值</span></span><br><span class="line">System.out.println(obj);</span><br></pre></td></tr></table></figure>
-
-<p>先对以前获取对象的方式在代码上相对有些复杂但是实际上反射机制只要获取类名就可创建出对象来。把上述中的<code>cn.demo.reflect.User</code>替换成<code>java.lang.String</code>就可以创建出一个String类对象，替换成<code>java.util.Data</code>就可以创建出一个Data的对象。</p>
         
           <a class="article-more-a" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/#more">more >></a>
         
@@ -283,10 +345,6 @@
 <li>可选的返回关键字：主体只有一个表达式返回值则编译器会自动返回值</li>
 </ul>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LambdaDemo1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义了一个打印工作者的接口</span></span><br><span class="line">    <span class="comment">//接口中抽象出一个打印动作</span></span><br><span class="line">    <span class="class"><span class="keyword">interface</span> <span class="title">Printer</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">Printing</span><span class="params">(String str)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//打印文本内容，把打印者的接口传入</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">PrintDoSome</span><span class="params">(String somestr,Printer printer)</span></span>&#123;</span><br><span class="line">        printer.Printing(somestr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//main方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LambdaDemo1 lambdaDemo1 = <span class="keyword">new</span> LambdaDemo1();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用匿名函数来重写Printing方法</span></span><br><span class="line">        <span class="comment">/*Printer p = new Printer() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public void Printing(String str) &#123;</span></span><br><span class="line"><span class="comment">                System.out.println(&quot;正在打印：&quot;+str);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;;*/</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//lambda简化代码</span></span><br><span class="line">        <span class="comment">/*Printer p = (String str) -&gt; &#123;</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;正在打印：&quot;+str);</span></span><br><span class="line"><span class="comment">        &#125;;*/</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//简化参数类型</span></span><br><span class="line">        <span class="comment">/*Printer p = (str) -&gt; &#123;</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;正在打印：&quot;+str);</span></span><br><span class="line"><span class="comment">        &#125;;*/</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//当只有一个参数时，小括号可以进行省略</span></span><br><span class="line">        <span class="comment">//方法体语句只有一句时，&#123;&#125;可以省略</span></span><br><span class="line">        Printer p = str -&gt; System.out.println(<span class="string">&quot;正在打印:&quot;</span>+str);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//传入文本完成打印动作</span></span><br><span class="line">        lambdaDemo1.PrintDoSome(<span class="string">&quot;Hello Java&quot;</span>,p);</span><br><span class="line"></span><br><span class="line">        lambdaDemo1.PrintDoSome(<span class="string">&quot;Hello Java&quot;</span>,str -&gt; System.out.println(<span class="string">&quot;正在打印:&quot;</span>+str));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Lambda方法引用"><a href="#Lambda方法引用" class="headerlink" title="Lambda方法引用"></a>Lambda方法引用</h2><p>可以快速的将一个Lambda表达式的实现指向一个已经实现的方法</p>
-<p>注意：方法的调用参数列表必须保持一致</p>
-<p>语法：方法的隶属者::方法名</p>
         
           <a class="article-more-a" href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/#more">more >></a>
         
