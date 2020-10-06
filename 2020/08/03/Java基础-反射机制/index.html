@@ -16,7 +16,7 @@
 <meta property="og:description" content="概述:one: 反射机制有什么用？ 通过java语言中的反射机制就可以操作字节码文件。 :two: 反射机制相关类在哪个包下？ java.lang.refect :three: 反射机制中常用的类  java.long.Class     字节码文件 java.lang.reflcet.Method  字节码文件中的方法字节码  java.lang.reflect.Field  字节码文件中的属性">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-03T12:43:03.000Z">
-<meta property="article:modified_time" content="2020-08-03T14:56:14.585Z">
+<meta property="article:modified_time" content="2020-10-06T09:09:27.244Z">
 <meta property="article:author" content="GXD">
 <meta name="twitter:card" content="summary">
   
@@ -183,6 +183,8 @@
 <li>java.lang.reflect.Field  字节码文件中的属性字节码</li>
 <li>java.lang.reflect.Constructor  字节码文件中的构造方法字节码</li>
 </ul>
+<a id="more"></a>
+
 <h2 id="获取Class的三种方式"><a href="#获取Class的三种方式" class="headerlink" title="获取Class的三种方式"></a>获取Class的三种方式</h2><ol>
 <li><p>通过forName()来获取</p>
 <blockquote>
@@ -198,8 +200,6 @@
 
 </li>
 </ol>
-<a id="more"></a>
-
 <h2 id="获取Class能干什么？"><a href="#获取Class能干什么？" class="headerlink" title="获取Class能干什么？"></a>获取Class能干什么？</h2><p>通过反射机制获取Class，通过Class来获取对象</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//User.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;无参构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(<span class="keyword">int</span> str)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;有参构造&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
