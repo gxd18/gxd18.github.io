@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://gxd18.github.io">
-  <title>Java基础-注解 | 笔记</title>
+  <title>git基本命令 | 笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。 语法1[修饰符列表] @interface 注解名&amp;#123;&amp;#125;  注解怎么用？1@注解名">
+  <meta name="description" content="基本命令 创建版本库   1git init   查看版本库状态  1git status   增加文件到暂存区  1git add filename   提交版本到分支  1git commit -m &quot;描述文字&quot;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础-注解">
-<meta property="og:url" content="http://gxd18.github.io/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/index.html">
+<meta property="og:title" content="git基本命令">
+<meta property="og:url" content="http://gxd18.github.io/2020/10/06/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="笔记">
-<meta property="og:description" content="概述注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。 语法1[修饰符列表] @interface 注解名&amp;#123;&amp;#125;  注解怎么用？1@注解名">
+<meta property="og:description" content="基本命令 创建版本库   1git init   查看版本库状态  1git status   增加文件到暂存区  1git add filename   提交版本到分支  1git commit -m &quot;描述文字&quot;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-08-03T13:11:30.000Z">
-<meta property="article:modified_time" content="2020-08-04T00:56:59.517Z">
+<meta property="article:published_time" content="2020-10-06T05:06:33.000Z">
+<meta property="article:modified_time" content="2020-10-06T09:07:25.423Z">
 <meta property="article:author" content="GXD">
 <meta name="twitter:card" content="summary">
   
@@ -152,96 +152,216 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java基础-注解" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git基本命令" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java基础-注解
+      git基本命令
     </h1>
   
 
         
-        <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-08-03T13:11:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
+        <a href="/2020/10/06/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" class="archive-article-date">
+  	<time datetime="2020-10-06T05:06:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>注解Aunotation 又称 Java 标注，是 JDK5.0 引入的一种注释机制。注解也是一种引用数据类型，编译后会生成.class文件，注解可以出现在属性、方法、类、变量、注解上。注解是给编译器的参考。</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[修饰符列表] @interface 注解名&#123;&#125;</span><br></pre></td></tr></table></figure>
+        <h4 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h4><blockquote>
+<p>创建版本库 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
-<h2 id="注解怎么用？"><a href="#注解怎么用？" class="headerlink" title="注解怎么用？"></a>注解怎么用？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@注解名</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看版本库状态</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>增加文件到暂存区</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add filename</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>提交版本到分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;描述文字&quot;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h2 id="系统内置注解"><a href="#系统内置注解" class="headerlink" title="系统内置注解"></a>系统内置注解</h2><table>
-<thead>
-<tr>
-<th>FunctionalInterface</th>
-<th>用翔实的注释类型来表示一个接口类型声明的目的是空功能接口由java语言规范定义。</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Override</td>
-<td>表示一个方法声明的目的是覆盖父类方法声明。</td>
-</tr>
-<tr>
-<td>SafeVarargs</td>
-<td>序员断言体标注的方法或构造函数没有对其参数进行交互可能不安全的操作。</td>
-</tr>
-<tr>
-<td>SuppressWarnings</td>
-<td>指示在注释元素（和包含在注释元素中的所有程序元素中）应被抑制命名的编译器警告。</td>
-</tr>
-<tr>
-<td>Deprecated</td>
-<td>标注那些过时的类、方法</td>
-</tr>
-</tbody></table>
-<h2 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h2><p>标注“注解”的注解，常用的元注解</p>
-<p>@Target（ElementType.METHOD)    修饰注解的，决定注解出现的位置</p>
-<p>ElementType是枚举类型，METHOD表明这个被注解的注解只能出现在方法上</p>
-<p>@Retention（RetentionPolicy.SOURCE)    修饰注解的，最总保存到哪里</p>
-<p>RetentionPolicy是枚举类型，SOURCE表明了被注解的注解只会保留在原文件中，编译不会生成.class文件</p>
-<h2 id="注解中的属性"><a href="#注解中的属性" class="headerlink" title="注解中的属性"></a>注解中的属性</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> myannotation&#123;</span><br><span class="line">    <span class="function">String <span class="title">name</span><span class="params">()</span></span>;    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">age</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//name、age是属性不是方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看文件具体修改</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff filename</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><code>myannotation</code>注解中有属性则必须给属性进行赋值，编译报错</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@主机名（属性名=属性值）</span></span><br><span class="line"><span class="meta">@myannotation(name=&quot;wang&quot;,age=12)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>以列表形式查看指定文件的历史修改记录。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git blame &lt;file&gt;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>如果属性中指定了默认值，在使用注解时可以不进行赋值，赋值后默认值会被覆盖</li>
-</ul>
-<ul>
-<li>如果注解中的属性名是value，在使用注解是可以忽略属性名</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> myannotation1&#123;</span><br><span class="line">    <span class="function">String <span class="title">value</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看历史版本</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log [--pretty&#x3D;oneline]</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@主机名（属性值)</span></span><br><span class="line"><span class="meta">@myannotation1(&quot;wang&quot;)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>基于当前版本回滚版本 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
 
-<h2 id="反射机制使用注解"><a href="#反射机制使用注解" class="headerlink" title="反射机制使用注解"></a>反射机制使用注解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationDemo2</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//获取类</span></span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.AnnotationDemo1&quot;</span>);</span><br><span class="line">        <span class="comment">//判断类上是否有注解</span></span><br><span class="line">        <span class="keyword">if</span>(c.isAnnotationPresent(myannotation.class))&#123;</span><br><span class="line">            <span class="comment">//获取注解对象</span></span><br><span class="line">            myannotation muan=(myannotation)c.getAnnotation(myannotation.class);</span><br><span class="line">            <span class="comment">//获取注解的属性</span></span><br><span class="line">            muan.age();</span><br><span class="line">            muan.name();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+<blockquote>
+<p>基于指定版本号回滚版本 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard [版本号]</span><br></pre></td></tr></table></figure>
 
-<h2 id="反射机制在开发中使用"><a href="#反射机制在开发中使用" class="headerlink" title="反射机制在开发中使用"></a>反射机制在开发中使用</h2><p><strong>假设有<code>@IDAnnotation</code>的注解,这个注解只能出现在类上，被注解的类中必须有<code>int</code>类型的<code>id</code>属性，否则抛出异常</strong></p>
-<ul>
-<li>创建一个注解</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这个元注解表名被注解的只能是类</span></span><br><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="comment">//这个元注解表名这个注解可以被反射机制拿到</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> IDAnnotation &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>查看历史命令及对应执行后的版本号：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>创建一个被标注的类</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@IDAnnotation</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotaionDemo3</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> id;</span><br><span class="line">    String name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在工作区中进行了修改，但尚未加入到暂存区</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>使用反射机制获取<code>AnnotationDemo3</code></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AnnotationDemo4</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">//获取AnnotationDemo3类</span></span><br><span class="line">        Class c=Class.forName(<span class="string">&quot;cn.demo.AnnotaionDemo3&quot;</span>);</span><br><span class="line">        <span class="comment">//默认标记</span></span><br><span class="line">        <span class="keyword">boolean</span> hasintid=<span class="keyword">false</span>;</span><br><span class="line">        <span class="comment">//判断是否有IDAnnotation这个注解</span></span><br><span class="line">        <span class="keyword">if</span>(c.isAnnotationPresent(IDAnnotation.class))&#123;</span><br><span class="line">            <span class="comment">//回去AnnotationDmeo3下的所有属性</span></span><br><span class="line">           Field[] fields=c.getDeclaredFields();</span><br><span class="line">            <span class="keyword">for</span> (Field field : fields) &#123;</span><br><span class="line">                <span class="comment">//判断是否有int id</span></span><br><span class="line">                <span class="keyword">if</span>(<span class="string">&quot;id&quot;</span>.equals(field.getName())&amp;&amp;<span class="string">&quot;int&quot;</span>.equals(field.getType().getSimpleName()))&#123;</span><br><span class="line">                    hasintid=<span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果没有int id抛出异常</span></span><br><span class="line">        <span class="keyword">if</span>(!hasintid)&#123;</span><br><span class="line">            <span class="comment">//自定义异常类</span></span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> AnnotationException(<span class="string">&quot;@IDAnnotation注解的类必须有int属性的id&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>将暂存区中对这个文件的记录删除掉</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.git reset HEAD &lt;file&gt;</span><br><span class="line">2.git checkout -- &lt;file&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通过tag指定版本标签名</p>
+</blockquote>
+<blockquote>
+<p>在当前分支当前提交上打标签</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看所有标签</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打标签在某个指定历史commit上</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v0.9 版本号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>创建带有说明的标签，用-a指定标签名，-m指定说明文字</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -a v1.0 -m &quot;null&quot; 版本号</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看一个tag信息</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show v1.0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>标签打错了，也可以删除</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v1.0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>推送某个标签到远程</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push orgigin v1.0</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一次性推送全部尚未推送到远程的本地标签</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push orgigin -- tags</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>删除远程标签</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. git tag -d v1.0</span><br><span class="line">2. git push orgigin :refs&#x2F;tags&#x2F;v1.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+
+<h4 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h4><blockquote>
+<p>本地关联到远程仓库：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;服务器名称&gt; &lt;远程仓库地址&gt; </span><br><span class="line">git remote add origin https:&#x2F;&#x2F;gitee.com&#x2F;pcj2619&#x2F;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>把本地库的内容推送到远程:</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u &lt;服务器名称&gt; &lt;本地分支名称&gt;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<p>第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<blockquote>
+<p>将远程仓库克隆到本地</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;远程仓库地址&gt; &lt;本地目录名&gt;</span><br><span class="line">git clone https:&#x2F;&#x2F;gitee.com&#x2F;pcj2619&#x2F;big1807 d:&#x2F;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>拉取远程仓库中的更改到本地仓库</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git pull &lt;远程仓库地址&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br><span class="line">$ git pull https:&#x2F;&#x2F;gitee.com&#x2F;pcj2619&#x2F;big1807 master:master </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>将本地仓库和远程仓库的关联关系删除</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$git remote rm &lt;服务器名称&gt; </span><br><span class="line">$git remote rm origin </span><br></pre></td></tr></table></figure>
+
+<hr>
+
+
+<h4 id="使用SSH连接"><a href="#使用SSH连接" class="headerlink" title="使用SSH连接"></a>使用SSH连接</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+
+<p>此命令会在用户主目录下生成.ssh目录，里面有id_rsa和id_rsa.pub两个文件，其中<font color=red>id_rsa是私钥</font>，不能泄露出去，id_rsa.pub是公钥，可以放心的传播。</p>
+<hr>
+
+
+<h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><blockquote>
+<p>查看分支</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gir branch</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>创建新的分支 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>切换分支 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>快速创建和切换分支 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>分支合并</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. git checkout master</span><br><span class="line">2. git merge &lt;分支名&gt;</span><br><span class="line">3. git branch -d &lt;需要删除的分支名&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在合并分支时可以增加一个–no-ff参数，此参数将会在合并分支时禁用Fast forward模式，效果上回自动在merge时增加一个提交，方便后续管理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --no-ff -m &quot;&quot; &lt;分支&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+
+
+
+<blockquote>
+<p>指定git忽略指定内容 </p>
+</blockquote>
+<p>可以在仓库中配置.gitIgnore文件，在其中配置哪些文件是不需要git管理，则git在处理此仓库时，会自动自动忽略声明的内容.</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1）空格不匹配任意文件，可作为分隔符，可用反斜杠转义</span><br><span class="line"></span><br><span class="line">2）以“＃”开头的行都会被 Git 忽略。即#开头的文件标识注释，可以使用反斜杠进行转义。</span><br><span class="line"></span><br><span class="line">3）可以使用标准的glob模式匹配。所谓的glob模式是指shell所使用的简化了的正则表达式。</span><br><span class="line"></span><br><span class="line">4）以斜杠&quot;/&quot;开头表示目录；&quot;/&quot;结束的模式只匹配文件夹以及在该文件夹路径下的内容，但是不匹配该文件；&quot;/&quot;开始的模式匹配项目跟目录；如果一个模式不包含斜杠，则它匹配相对于当前 .gitignore 文件路径的内容，如果该模式不在 .gitignore 文件中，则相对于项目根目录。</span><br><span class="line"></span><br><span class="line">5）以星号&quot;*&quot;通配多个字符，即匹配多个任意字符；使用两个星号&quot;**&quot; 表示匹配任意中间目录，比如`a/**/z`可以匹配 a/z, a/b/z 或 a/b/c/z等。</span><br><span class="line"></span><br><span class="line">6）以问号&quot;?&quot;通配单个字符，即匹配一个任意字符；</span><br><span class="line"></span><br><span class="line">7）以方括号&quot;[]&quot;包含单个字符的匹配列表，即匹配任何一个列在方括号中的字符。比如[abc]表示要么匹配一个a，要么匹配一个b，要么匹配一个c；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配。比如[0-9]表示匹配所有0到9的数字，[a-z]表示匹配任意的小写字母）。</span><br><span class="line"></span><br><span class="line">8）以叹号&quot;!&quot;表示不忽略(跟踪)匹配到的文件或目录，即要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。需要特别注意的是：如果文件的父目录已经被前面的规则排除掉了，那么对这个文件用&quot;!&quot;规则是不起作用的。也就是说&quot;!&quot;开头的模式表示否定，该文件将会再次被包含，如果排除了该文件的父级目录，则使用&quot;!&quot;也不会再次被包含。可以使用反斜杠进行转义。</span><br><span class="line"></span><br><span class="line">需要谨记：git对于.ignore配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效；</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">#               表示此为注释,将被Git忽略</span><br><span class="line">*.a             表示忽略所有 .a 结尾的文件</span><br><span class="line">!lib.a          表示但lib.a除外</span><br><span class="line">/TODO      表示仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO</span><br><span class="line">build/          表示忽略 build/目录下的所有文件，过滤整个build文件夹；</span><br><span class="line">doc/*.txt       表示会忽略doc/notes.txt但不包括 doc/server/arch.txt</span><br><span class="line"> </span><br><span class="line">bin/:           表示忽略当前路径下的bin文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件</span><br><span class="line">/bin:           表示忽略根目录下的bin文件</span><br><span class="line">/*.c:           表示忽略cat.c，不忽略 build/cat.c</span><br><span class="line">debug/*.obj:    表示忽略debug/io.obj，不忽略 debug/common/io.obj和tools/debug/io.obj</span><br><span class="line"></span><br><span class="line">**/foo:         表示忽略/foo,a/foo,a/b/foo等</span><br><span class="line">a/**/b:         表示忽略a/b, a/x/b,a/x/y/b等</span><br><span class="line">!/bin/run.sh    表示不忽略bin目录下的run.sh文件</span><br><span class="line">*.log:          表示忽略所有 .log 文件</span><br><span class="line">config.php:     表示忽略当前路径的 config.php 文件</span><br><span class="line"> </span><br><span class="line">/mtk/           表示过滤整个文件夹</span><br><span class="line">*.zip           表示过滤所有.zip文件</span><br><span class="line">/mtk/do.c       表示过滤某个具体文件</span><br><span class="line">被过滤掉的文件就不会出现在git仓库中（gitlab或github）了，当然本地库中还有，只是push的时候不会上传。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">需要注意的是，gitignore还可以指定要将哪些文件添加到版本管理中，如下：</span><br><span class="line">!*.zip</span><br><span class="line">!/mtk/one.txt</span><br><span class="line"></span><br><span class="line">唯一的区别就是规则开头多了一个感叹号，Git会将满足这类规则的文件添加到版本管理中。为什么要有两种规则呢？</span><br><span class="line"></span><br><span class="line">想象一个场景：假如我们只需要管理/mtk/目录中的one.txt文件，这个目录中的其他文件都不需要管理，那么.gitignore规则应写为：：</span><br><span class="line"></span><br><span class="line">/mtk/*</span><br><span class="line"></span><br><span class="line">!/mtk/one.txt</span><br><span class="line"></span><br><span class="line">假设我们只有过滤规则，而没有添加规则，那么我们就需要把/mtk/目录下除了one.txt以外的所有文件都写出来！</span><br><span class="line"></span><br><span class="line">注意上面的/mtk/*不能写为/mtk/，否则父目录被前面的规则排除掉了，one.txt文件虽然加了!过滤规则，也不会生效！</span><br><span class="line"></span><br><span class="line">----------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">还有一些规则如下：</span><br><span class="line"></span><br><span class="line">fd1/*</span><br><span class="line">说明：忽略目录 fd1 下的全部内容；注意，不管是根目录下的 /fd1/ 目录，还是某个子目录 /child/fd1/ 目录，都会被忽略；</span><br><span class="line"></span><br><span class="line">/fd1/*</span><br><span class="line">说明：忽略根目录下的 /fd1/ 目录的全部内容；</span><br><span class="line"> </span><br><span class="line">/*</span><br><span class="line">!.gitignore</span><br><span class="line">!/fw/ </span><br><span class="line">/fw/*</span><br><span class="line">!/fw/bin/</span><br><span class="line">!/fw/sf/</span><br><span class="line">说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录；注意要先对bin/的父目录使用!规则，使其不被排除。</span><br></pre></td></tr></table></figure>
 
 
       
@@ -301,7 +421,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://gxd18.github.io/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://gxd18.github.io/2020/10/06/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,18 +435,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/10/06/git%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git基本命令
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java基础-反射机制</div>
+    <a href="/2020/08/03/Java%E5%9F%BA%E7%A1%80-%E6%B3%A8%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java基础-注解</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -353,7 +464,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E6%80%8E%E4%B9%88%E7%94%A8%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">注解怎么用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%86%85%E7%BD%AE%E6%B3%A8%E8%A7%A3"><span class="toc-number">4.</span> <span class="toc-text">系统内置注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E6%B3%A8%E8%A7%A3"><span class="toc-number">5.</span> <span class="toc-text">元注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E4%B8%AD%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text">注解中的属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">7.</span> <span class="toc-text">反射机制使用注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%9C%A8%E5%BC%80%E5%8F%91%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-number">8.</span> <span class="toc-text">反射机制在开发中使用</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">基本命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">远程操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">使用SSH连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text">分支管理</span></a></li></ol>
                     </div>
                 </span>
             </div>
